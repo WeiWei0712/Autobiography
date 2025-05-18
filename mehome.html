@@ -137,6 +137,9 @@
             const englishSkills = document.getElementById('english-skills');
             const chinesewebs = document.getElementById('chinese-webs');
             const englishwebs = document.getElementById('english-webs');
+            document.getElementById('btn-zh').classList.toggle('hidden', lang === 'zh');
+            document.getElementById('btn-en').classList.toggle('hidden', lang === 'en');
+
 
             if (lang === 'en') {
                 chineseContent.classList.add('hidden');
@@ -168,12 +171,13 @@
     <header>
         <h1 id="chinese-header">您好，我是孫凱威</h1>
         <h1 id="english-header" class="hidden">Hello, I am Kevin (Kai-Wei) Sun </h1>
-        <a href="#" class="language-button" onclick="switchLanguage('zh')">中文</a>
-        <a href="#" class="language-button" onclick="switchLanguage('en')">English</a>
         
-    </header>
+        <a href="#" id="btn-zh" class="language-button" onclick="switchLanguage('zh')">中文</a>
+        <a href="#" id="btn-en" class="language-button" onclick="switchLanguage('en')">English</a>
 
     </header>
+
+    
     <main>
         <section id="chinese-content">
             <h2>自傳</h2>
